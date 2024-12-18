@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walkable Area Detection App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Walkable Area Detection</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#insights">Insights</a></li>
+                <li><a href="#report">Report Issues</a></li>
+                <li><a href="#profile">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home">
+            <h2>Explore Walkable Areas</h2>
+            <div id="map"></div>
+            <div class="search-bar">
+                <input type="text" id="search" placeholder="Search for a location...">
+                <button onclick="searchLocation()">Search</button>
+            </div>
+        </section>
+
+        <!-- Insights Section -->
+        <section id="insights">
+            <h2>Walkability Insights</h2>
+            <div class="insights-container">
+                <p>Select an area on the map to view detailed insights.</p>
+                <div id="insight-details">
+                    <!-- Insights will be dynamically loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Report Issues Section -->
+        <section id="report">
+            <h2>Report Walkability Issues</h2>
+            <form id="report-form">
+                <label for="issue-type">Issue Type:</label>
+                <select id="issue-type">
+                    <option value="sidewalk">Broken Sidewalk</option>
+                    <option value="crosswalk">Missing Crosswalk</option>
+                    <option value="lighting">Poor Lighting</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="description">Description:</label>
+                <textarea id="description" rows="4" placeholder="Describe the issue..."></textarea>
+
+                <label for="media">Upload Media (Optional):</label>
+                <input type="file" id="media" accept="image/*,video/*">
+
+                <button type="submit">Submit Report</button>
+            </form>
+        </section>
+
+        <!-- Profile Section -->
+        <section id="profile">
+            <h2>Your Profile</h2>
+            <div class="profile-container">
+                <p><strong>Name:</strong> John Doe</p>
+                <p><strong>Reports Submitted:</strong> 5</p>
+                <p><strong>Saved Areas:</strong> 3</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Walkable Area Detection App</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
